@@ -1,5 +1,101 @@
 Name,Set code,Set name,Collector number,Foil,Rarity,Quantity,ManaBox ID,Scryfall ID,Purchase price,Misprint,Altered,Condition,Language,Purchase price currency
-Judge's Familiar,F13,Friday Night Magic 2013,5,foil,rare,1,17102,a94cfc94-08cd-406b-8e58-0a69ea0e312f,2.79,false,false,near_mint,es,USD
-Judge's Familiar,RTR,Return to Ravnica,218,normal,uncommon,1,17204,0fc51899-3970-416b-b7de-fadbc9678955,0.35,false,false,near_mint,es,USD
-Nivmagus Elemental,RTR,Return to Ravnica,219,normal,rare,1,17203,b1892003-2e4c-43bd-8a37-3a97a76f113a,0.49,false,false,near_mint,es,USD
-Dryad Militant,GK1,GRN Guild Kit,111,normal,uncommon,1,35,3ba06012-ef77-4cc1-a795-eb50612d247f,0.35,false,false,near_mint,es,USD
+Steward of Valeron,ALA,Shards of Alara,198,normal,common,1,23901,92e21ff9-0030-4e53-8ddf-86d8e78e347f,0.35,false,false,near_mint,es,USD
+Merfolk Mistbinder,RIX,Rivals of Ixalan,164,normal,uncommon,3,2854,2935b829-23fb-415e-90f2-2e0016b5cde9,0.39,false,false,near_mint,es,USD
+Improbable Alliance,ELD,Throne of Eldraine,193,normal,uncommon,1,46145,0461867b-ec35-4d37-a398-5247e06c4afe,0.35,false,false,near_mint,es,USD
+Tenth District Legionnaire,WAR,War of the Spark,222,normal,uncommon,1,44182,44f3090b-917b-4122-b522-27c30dca8e69,0.35,false,false,near_mint,es,USD
+Bloodtithe Harvester,VOW,Innistrad: Crimson Vow,232,normal,uncommon,1,64463,f0192cf7-3391-4720-b9c8-72dec5dde01e,0.39,false,false,near_mint,es,USD
+Improbable Alliance,ELD,Throne of Eldraine,396,foil,uncommon,1,45942,eceaa1d6-0d31-4f2d-8ffb-5a4e31712ffa,0.49,false,false,near_mint,es,USD
+Deathcult Rogue,GTC,Gatecrash,218,normal,common,2,16606,a4c186d2-e631-4811-83ea-fdb54e730a5d,0.35,false,false,near_mint,es,USD
+Martial Glory,GTC,Gatecrash,175,normal,common,2,16649,3690c96c-70a3-45e5-84d7-5c82809a8f45,0.35,false,false,near_mint,es,USD
+Vernadi Shieldmate,GRN,Guilds of Ravnica,219,normal,common,4,264,efddad21-553e-4947-80d2-833b42c45f77,0.35,false,false,near_mint,es,USD
+Pitiless Pontiff,RNA,Ravnica Allegiance,194,normal,uncommon,2,43671,98f66c03-cf79-4de0-be55-b921cbdc5038,0.35,false,false,near_mint,es,USD
+Voidwing Hybrid,ONE,Phyrexia: All Will Be One,221,normal,uncommon,3,78685,8a48705f-bd8a-43f1-b1fe-14a5c9a83ccd,0.35,false,false,near_mint,es,USD
+Harsh Sustenance,FRF,Fate Reforged,154,normal,common,1,11972,770d60a0-23fc-4224-873c-2e5549b3a816,0.35,false,false,near_mint,es,USD
+Golgari Germination,RAV,Ravnica: City of Guilds,209,normal,uncommon,1,27801,24a1db16-d936-4f92-9611-327a988ce04c,0.99,false,false,near_mint,es,USD
+Vindicate,MH2,Modern Horizons 2,294,normal,rare,1,59602,683c4e13-525c-45c9-8832-bfe67965c34e,0.99,false,false,near_mint,es,USD
+Brokers Charm,SNC,Streets of New Capenna,171,normal,uncommon,1,67834,74c9c315-1cf4-468e-a74a-b5f3be4a63a1,0.35,false,false,near_mint,es,USD
+Obscura Charm,SNC,Streets of New Capenna,323,normal,uncommon,1,67731,4a02b758-65b6-4c25-83b9-de63a1a92b51,0.35,false,false,near_mint,es,USD
+Putrefy,C20,Commander 2020,228,normal,uncommon,1,50190,b427f1a9-039f-4d1a-94c6-f9c8044217e1,0.49,false,false,near_mint,es,USD
+Savvy Hunter,ELD,Throne of Eldraine,200,normal,uncommon,1,46138,15c98441-2b31-4e48-a399-f36dffcfa41d,0.35,false,false,near_mint,es,USD
+Anax and Cymede,THS,Theros,186,normal,rare,1,15478,63cb977e-bd42-43b1-83d1-124e7a413aca,0.49,false,false,near_mint,es,USD
+Profane Procession // Tomb of the Dusk Rose,RIX,Rivals of Ixalan,166,normal,rare,1,2852,1d94ff37-f04e-48ee-8253-d62ab07f0632,0.49,false,false,near_mint,es,USD
+Atzocan Seer,RIX,Rivals of Ixalan,153,normal,uncommon,3,2865,fe84b3c0-bca2-42d3-a82c-540644e59625,0.35,false,false,near_mint,es,USD
+Biovisionary,GTC,Gatecrash,146,normal,rare,1,16678,2000b4e8-7887-454e-9d52-211516613dd0,0.59,false,false,near_mint,es,USD
+Gaze of Granite,DGM,Dragon's Maze,72,normal,rare,1,16393,96c9ac10-d114-4aa5-87ac-f1069cde8e40,0.49,false,false,near_mint,es,USD
+Unmoored Ego,GRN,Guilds of Ravnica,212,normal,rare,1,271,95aecc12-3363-41f7-9b58-277c81859670,0.49,false,false,near_mint,es,USD
+Cabaretti Charm,SNC,Streets of New Capenna,173,normal,uncommon,1,67597,08f33c8a-8e93-4296-964b-da132a854b3b,0.35,false,false,near_mint,es,USD
+Maestros Charm,SNC,Streets of New Capenna,199,normal,uncommon,1,67711,3dcdedb6-3c24-4a29-b9b9-27cc47d8ee56,0.35,false,false,near_mint,es,USD
+Maestros Charm,SNC,Streets of New Capenna,317,normal,uncommon,1,67704,3b3e1bec-67d2-43fd-b799-b7c12b94d1f0,0.35,false,false,near_mint,es,USD
+Brokers Charm,SNC,Streets of New Capenna,298,normal,uncommon,1,67599,0aac0943-6c9a-4c65-9d17-3ca0f2ba2340,0.35,false,false,near_mint,es,USD
+"Henzie ""Toolbox"" Torre",NCC,New Capenna Commander,2,normal,mythic,1,68075,ee228dcc-3170-4c24-80bc-28bcee07cb43,0.99,false,false,near_mint,es,USD
+Corpse Appraiser,SNC,Streets of New Capenna,178,normal,uncommon,1,68046,e0f254bb-ec77-4147-ab9c-559bc7fba8cd,0.35,false,false,near_mint,es,USD
+Abzan Charm,KTK,Khans of Tarkir,161,normal,uncommon,1,13237,8f7b7598-35b0-4bb5-8347-8c868500f846,0.39,false,false,near_mint,es,USD
+Sultai Ascendancy,PKTK,Khans of Tarkir Promos,203s,foil,rare,1,13407,878f7e89-d9a0-47da-bd38-6e4f0f97600c,0.79,false,false,near_mint,es,USD
+"Kalain, Reclusive Painter",AFR,Adventures in the Forgotten Realms,225,normal,uncommon,1,60476,e45e9552-7737-4c61-89b0-5a3bec3c8f34,0.79,false,false,near_mint,es,USD
+Rakdos Charm,RTR,Return to Ravnica,184,normal,uncommon,2,17238,0fcd4394-d22d-4eec-ad73-ffaf10ad60de,0.79,false,false,near_mint,es,USD
+Frodo Baggins,LTR,The Lord of the Rings: Tales of Middle-earth,205,normal,uncommon,1,83576,de1c0399-9db8-4901-b72e-0010eb9b92b0,0.35,false,false,near_mint,es,USD
+Firemind's Research,PGRN,Guilds of Ravnica Promos,171,foil,rare,2,171,cd318e8f-418a-4e17-bf0e-a4bfc0fb8ebf,0.49,false,false,near_mint,es,USD
+Gruul Spellbreaker,PRNA,Ravnica Allegiance Promos,179p,normal,rare,3,46555,efb66fa0-b47c-49e1-8ee0-982f646545ec,0.59,false,false,near_mint,es,USD
+Growth Spiral,RNA,Ravnica Allegiance,178,normal,common,7,43687,7c77a6b1-ef06-4da5-8e86-a5204216cb77,0.39,false,false,near_mint,es,USD
+Satyr Enchanter,M19,Core Set 2019,223,normal,uncommon,4,1089,e31c544f-a748-4180-8366-9bb1622bb99d,0.79,false,false,near_mint,es,USD
+Wayfaring Temple,RTR,Return to Ravnica,209,normal,rare,3,17213,2125e6aa-f916-4dfa-a9fe-82bb546012af,0.49,false,false,near_mint,es,USD
+Frodo Baggins,PLTR,Tales of Middle-earth Promos,404s,foil,uncommon,1,83875,3ec29d0c-0449-4f1a-8b61-7f3490323827,0.49,false,false,near_mint,es,USD
+Callous Sell-Sword // Burn Together,WOE,Wilds of Eldraine,221,normal,uncommon,2,85498,770ee3da-d33e-466f-9a2e-ad2d08ef5012,0.35,false,false,near_mint,es,USD
+Corpse Knight,M20,Core Set 2020,206,normal,uncommon,2,45255,8b45117b-8369-48fc-8e5d-8986e662d123,0.99,false,false,near_mint,es,USD
+"Baird, Argivian Recruiter",DMU,Dominaria United,195,normal,uncommon,1,71306,1f643d78-d8d8-4645-9357-a68ebd0d3517,0.35,false,false,near_mint,es,USD
+Faithful Mending,MID,Innistrad: Midnight Hunt,221,normal,uncommon,1,63236,50752ca9-ea85-4c4b-9bf5-4f8759a7dcec,0.69,false,false,near_mint,es,USD
+Bartolomé del Presidio,LCI,The Lost Caverns of Ixalan,224,normal,uncommon,1,88562,690ccdc7-6c43-4902-9d11-2f07b7a36b11,0.35,false,false,near_mint,es,USD
+Destructive Revelry,THS,Theros,192,normal,uncommon,1,15472,798af7cb-645f-4526-8a19-6e4595b93964,0.35,false,false,near_mint,es,USD
+Goblin Electromancer,RTR,Return to Ravnica,163,normal,common,1,17259,79fb620f-4057-4f60-94b9-56ab855be974,0.35,false,false,near_mint,es,USD
+Goblin Electromancer,GRN,Guilds of Ravnica,174,normal,common,1,309,0ae987da-e4b5-4b82-843c-6aaa87262fc8,0.35,false,false,near_mint,es,USD
+Heartflame Duelist // Heartflame Slash,WOE,Wilds of Eldraine,228,normal,rare,1,85524,811b283f-22f3-47b1-a802-11dc8c25d0ee,0.49,false,false,near_mint,es,USD
+Scalding Viper // Steam Clean,WOE,Wilds of Eldraine,235,normal,rare,1,85414,58e72bfb-6f64-4647-afb6-b5ad4737121c,0.49,false,false,near_mint,es,USD
+Picnic Ruiner // Stolen Goodies,WOE,Wilds of Eldraine,232,normal,uncommon,1,85459,66485c3e-3b21-4db4-ac12-af04e35b49b1,0.35,false,false,near_mint,es,USD
+Shrouded Shepherd // Cleave Shadows,WOE,Wilds of Eldraine,236,normal,uncommon,1,85644,ab03c342-2bf4-41bf-8bb8-472d978d238a,0.35,false,false,near_mint,es,USD
+Heartflame Duelist // Heartflame Slash,PWOE,Wilds of Eldraine Promos,228s,foil,rare,1,86166,4d6de5b6-2c4a-4e31-89ba-e821aac2376e,0.49,false,false,near_mint,es,USD
+"Ruby, Daring Tracker",WOE,Wilds of Eldraine,212,normal,uncommon,1,85870,ffb5786b-6825-4ebf-a1e1-80011340adbb,0.49,false,false,near_mint,es,USD
+Cruel Somnophage // Can't Wake Up,WOE,Wilds of Eldraine,286,normal,rare,1,85534,852d840c-c9b5-4486-b1f5-95ea88577fa0,0.59,false,false,near_mint,es,USD
+Cindervines,PRNA,Ravnica Allegiance Promos,161s,foil,rare,1,44053,33c159a1-0cf5-4aa2-abdc-ab8daafc1225,2.29,false,false,near_mint,es,USD
+Invasion of Ergamon // Truga Cliffcharger,MOM,March of the Machine,233,normal,uncommon,1,81437,b3e0fc49-f765-4bd1-a2b9-23e703388b50,0.35,false,false,near_mint,es,USD
+Terminate,ARB,Alara Reborn,46,normal,common,1,23462,dc8acab8-4469-4baa-af2f-a3f49b841a55,1.29,false,false,near_mint,es,USD
+Rakshasa Deathdealer,KTK,Khans of Tarkir,192,normal,rare,2,13206,ab4e0b33-dad1-4443-a7c7-a7bab067d04a,0.49,false,false,near_mint,es,USD
+Watcher of the Spheres,M21,Core Set 2021,227,normal,uncommon,1,50764,354b9ea4-3d55-48cc-b426-c46b1d1bb397,0.39,false,false,near_mint,es,USD
+Stormfist Crusader,ELD,Throne of Eldraine,203,normal,rare,2,46135,27425f2e-e0b2-489d-877d-8257d2026bfd,1.29,false,false,near_mint,es,USD
+Dreadhorde Butcher,WAR,War of the Spark,194,normal,rare,1,44210,457bc402-4c31-465c-95e1-694f686e257e,0.49,false,false,near_mint,es,USD
+Dance of the Manse,PELD,Throne of Eldraine Promos,186p,normal,rare,1,46408,085863ba-06f0-480d-b7be-8f8c4b97d573,1.29,false,false,near_mint,es,USD
+Dance of the Manse,ELD,Throne of Eldraine,186,normal,rare,1,46152,5dca90ef-1c17-4dcc-9fef-dab9ee92f590,0.79,false,false,near_mint,es,USD
+Gallia of the Endless Dance,PTHB,Theros Beyond Death Promos,217p,normal,rare,1,47112,29d6cc57-514b-42e3-8f01-f66957889e9a,0.49,false,false,near_mint,es,USD
+Gallia of the Endless Dance,THB,Theros Beyond Death,217,normal,rare,1,46845,0744f08e-a588-4efe-ad56-5e9ed91dda40,0.49,false,false,near_mint,es,USD
+Coiling Oracle,DIS,Dissension,107,normal,common,2,27318,55a6ba2a-b372-4b15-9a1e-09b41316eab7,0.49,false,false,near_mint,es,USD
+Voltaic Brawler,KLD,Kaladesh,189,normal,uncommon,3,7454,cb038fd3-51b7-4de7-9b38-cbad7c8717c2,0.35,false,false,near_mint,es,USD
+Ethereal Absolution,PRNA,Ravnica Allegiance Promos,170s,foil,rare,1,44048,23c0c440-00b8-41d2-85ee-f5b4468853da,2.79,false,false,near_mint,es,USD
+Ready // Willing,DGM,Dragon's Maze,132,normal,rare,1,16333,22081f95-dc8e-41ed-b609-b6a22ee5428b,0.49,false,false,near_mint,es,USD
+Collective Blessing,RTR,Return to Ravnica,150,normal,rare,3,17272,53c84c4d-e6d6-4eac-9d14-5b6cba914c3d,0.49,false,false,near_mint,es,USD
+Trostani's Summoner,DGM,Dragon's Maze,110,normal,uncommon,1,16355,1921fa4e-2256-4ef1-b2fe-874f9fbbcdf3,0.39,false,false,near_mint,es,USD
+Trostani's Summoner,PDGM,Dragon's Maze Promos,110,normal,uncommon,1,16470,2a50a999-8b16-4f0f-ba30-61e7d1114f1a,0.49,false,false,near_mint,es,USD
+"Millicent, Restless Revenant",VOC,Crimson Vow Commander,1,normal,mythic,1,64142,2b86b538-0766-440d-a2cd-f5d5bfcfb010,0.99,false,false,near_mint,es,USD
+Archon of the Triumvirate,PRTR,Return to Ravnica Promos,142★,foil,rare,1,17430,07baef91-d7fd-4890-8c00-62f1a416dc76,0.49,false,false,near_mint,es,USD
+Sisters of Stone Death,RAV,Ravnica: City of Guilds,231,normal,rare,1,27779,d214d25b-96c3-4479-88f0-3996805d6e6f,0.79,false,false,near_mint,es,USD
+Borborygmos Enraged,GTC,Gatecrash,147,normal,mythic,1,16677,8644c60f-7d06-4026-bcf3-df054701ca0a,0.99,false,false,near_mint,es,USD
+Invasion of Lorwyn // Winnowing Forces,MOM,March of the Machine,236,normal,uncommon,1,81155,93f623da-616e-4067-9ea8-5dfbeef8ce0b,0.35,false,false,near_mint,es,USD
+"Gyruda, Doom of Depths",PIKO,Ikoria: Lair of Behemoths Promos,221p,normal,rare,1,50593,6c73a30d-23b0-42e4-934d-e54dbd22d98a,1.99,false,false,near_mint,es,USD
+Ready // Willing,DGM,Dragon's Maze,132,foil,rare,1,16333,22081f95-dc8e-41ed-b609-b6a22ee5428b,0.79,false,false,near_mint,es,USD
+Juniper Order Ranger,CSP,Coldsnap,130,normal,uncommon,1,27111,ce582ff6-6a21-418d-b72c-4402a43be7dc,0.49,false,false,near_mint,es,USD
+"Tolsimir, Friend to Wolves",WAR,War of the Spark,224,normal,rare,1,44180,f7fce047-49f1-40ae-8410-6501cb0f8201,0.49,false,false,near_mint,es,USD
+Bioessence Hydra,WAR,War of the Spark,186,normal,rare,2,44218,fb01a161-49a1-407c-8410-6933bc8f7b6a,0.49,false,false,near_mint,es,USD
+Wavesifter,MH2,Modern Horizons 2,217,normal,common,1,59400,0a269277-7f4e-40de-a2b4-53aa50cfd665,0.35,false,false,near_mint,es,USD
+Enter the God-Eternals,WAR,War of the Spark,196,normal,rare,1,44208,f67e7070-2266-4c93-8c89-084e12ba7a4e,0.49,false,false,near_mint,es,USD
+Vizkopa Confessor,GTC,Gatecrash,205,normal,uncommon,1,16619,cac639b9-6c20-45ac-a61f-082bdcebdb83,0.35,false,false,near_mint,es,USD
+Rise to Glory,THB,Theros Beyond Death,225,normal,uncommon,1,46837,cf6c11c8-64a1-46a4-979c-56a6d5b873d3,0.35,false,false,near_mint,es,USD
+Nikya of the Old Ways,RNA,Ravnica Allegiance,193,normal,rare,3,43672,0dcdad71-323e-41e0-a1b3-9fd5b753e71c,0.49,false,false,near_mint,es,USD
+Underworld Cerberus,THS,Theros,208,normal,mythic,1,15456,3a078c3d-88db-4459-9667-ce610ae2f660,0.99,false,false,near_mint,es,USD
+"Brokkos, Apex of Forever",IKO,Ikoria: Lair of Behemoths,179,normal,mythic,1,49898,c9f07625-fbd8-4581-8568-eb3cfb2a4c1e,1.99,false,false,near_mint,es,USD
+"Evelyn, the Covetous",SNC,Streets of New Capenna,184,normal,rare,1,67991,c0dad61f-36cd-46af-82b7-a02e04efd676,0.49,false,false,near_mint,es,USD
+"Najal, the Storm Runner",DMU,Dominaria United,307,normal,uncommon,1,71838,edf2ec7b-7cac-49aa-8fab-f9280548573b,0.35,false,false,near_mint,es,USD
+Campaign of Vengeance,EMN,Eldritch Moon,182,normal,uncommon,1,8152,c284997a-cfc3-4ffc-bc25-00c130fb1eb0,0.39,false,false,near_mint,es,USD
+"Tiana, Ship's Caretaker",DOM,Dominaria,208,normal,uncommon,1,2068,9a8aea2f-1e1d-4e0d-8370-207b6cae76e3,0.35,false,false,near_mint,es,USD
+Join Shields,GRN,Guilds of Ravnica,181,normal,uncommon,2,302,91898d8a-589d-43db-8dc4-0ec6a3bd6d49,0.35,false,false,near_mint,es,USD
+"Roalesk, Apex Hybrid",WAR,War of the Spark,213,normal,mythic,1,44191,de14b4fd-fb4e-4986-9123-69ae68b5050a,0.99,false,false,near_mint,es,USD
+Hero of the Dunes,BRO,The Brothers' War,213,normal,uncommon,1,75662,9c6c72d5-f08e-4e46-a5cb-26d1fc0a71c8,0.35,false,false,near_mint,es,USD
+"Syr Armont, the Redeemer",WOE,Wilds of Eldraine,214,foil,uncommon,1,85533,85050609-baf0-430a-ab33-83a6ea6d4741,0.49,false,false,near_mint,es,USD
+"Omnath, Locus of All",MOM,March of the Machine,249,normal,rare,1,80440,33d94ecf-758b-4f68-a7be-6bf3ff1047f4,0.49,false,false,near_mint,es,USD

@@ -2,9 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const csv = require('csvtojson');
-
+const converter = require('json-2-csv');
 const fileInputName = './input/carton-premium-es.csv'; 
+const options = {};
 
+
+let requestCount = 0;
+let startTime = Date.now();
 
 
 
@@ -50,11 +54,11 @@ function colorTranslator(colors){
             colorEs = "Azul"
             break;
         case "B" :
-            colorEs = "Black"
+            colorEs = "Negro"
             break;
 
         case "W" :
-            colorEs = "Blanca"
+            colorEs = "Blanco"
             break;
 
         case "G" :
@@ -62,11 +66,11 @@ function colorTranslator(colors){
             break;
 
         case "R" :
-            colorEs = "Roja"   
+            colorEs = "Rojo"   
             break;
 
         case "" :
-            colorEs = "Incolora"   
+            colorEs = "Incoloro"   
             break;
 
         default:
@@ -100,24 +104,38 @@ async function csvToJsonConverter(csvInput){
 
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function getInfo(scryfallId){
-
-
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
         url: `https://api.scryfall.com/cards/${scryfallId}`,
         headers: { }
-      };
+    };
 
-      try{
-          let cardData = await axios.request(config);
-          return cardData.data;
-        } catch(error) {
-            console.error(error);
-        }
-};
+    await sleep(100); // Wait for 100ms before making the request
+
+    // Update the request counter and check the time
+    requestCount++;
+    const currentTime = Date.now();
+    if (currentTime - startTime > 1000) { // More than a second has passed
+        console.log(`Requests in the last second: ${requestCount}`);
+        requestCount = 1; // Reset the counter
+        startTime = currentTime; // Reset the start time
+    }
+
+    try {
+        let cardData = await axios.request(config);
+        return cardData.data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
 
 
 
@@ -159,19 +177,19 @@ async function transformData(csvData){
         
 
                 jsonformatted.push({   
-                // Meta
+                // Generales
                 Tipo: "Variable",      
                 SKU: `${element.Name}`,
                 Nombre: element.Name,  
                 Inventario: "",
-                "Precio normal": element["Purchase price"],
+                "Precio normal": "",
                 "Categorías": "Cartas", 
-                "Imágenes":"",
+                "Imágenes": `https://cards.scryfall.io/normal/front/9/2/${element["Scryfall ID"]}.jpg`,
                 "Superior": "",
                 "Posición": "0", 
                 // foil
                 "Nombre del atributo 1": "Foil", 
-                "Valor(es) del atributo 1":"foil, normal",
+                "Valor(es) del atributo 1":"foil, no foil, etched",
                 "Atributo visible 1": "1",
                 "Atributo global 1": "1",
                 // idioma.colors
@@ -185,13 +203,13 @@ async function transformData(csvData){
                 "Atributo visible 3": "1",
                 "Atributo global 3": "1",
                 //Versiones
-                "Nombre del atributo 4": "Versiones",
+                "Nombre del atributo 4": "Version",
                 "Valor(es) del atributo 4": versiones,
                 "Atributo visible 4": "1", 
                 "Atributo global 4": "1",
                 //Color
                 "Nombre del atributo 5": "Color", 
-                "Valor(es) del atributo 5":", normal",
+                "Valor(es) del atributo 5":colorTranslator(cardData.colors),
                 "Atributo visible 5": "1",
                 "Atributo global 5": "1",
                 "Meta: idioma": "" ,
@@ -206,7 +224,7 @@ async function transformData(csvData){
                 "Atributo visible 7": "1",
                 "Atributo global 7": "1",
                 //meta color 
-                "Meta color":colorTranslator(cardData.colors),
+                "Meta: color":colorTranslator(cardData.colors),
                 "Meta _color":"field_65caaaf3de76f",
                 // meta cmc
                 "Meta: costo_convertido_de_mana": cardData.cmc,
@@ -228,16 +246,15 @@ async function transformData(csvData){
             Tipo: "Variation",      
             SKU: `${element["Set code"]}-${element["Collector number"]}-${element.Language}-${element.Foil}`,
             Nombre: element.Name,  
-            "Descripción corta": cardData.oracle_text, 
             Inventario: element.Quantity,
-            "Precio normal": element["Purchase price"],
+            "Precio normal": (element["Purchase price"] * 0.9).toFixed(2),
             "Categorías": "", 
-            "Imágenes":cardData.image_uris.normal,
+            "Imágenes":`https://cards.scryfall.io/normal/front/9/2/${element["Scrifall ID"]}.jpg`,
             "Superior": element.Name,
             "Posición": "", 
             // foil
             "Nombre del atributo 1": "Foil", 
-            "Valor(es) del atributo 1": element.Foil,
+            "Valor(es) del atributo 1": element.Foil==="foil" ? "foil" : "no foil",
             "Atributo visible 1": "",
             "Atributo global 1": "1",
             "Nombre del atributo 2": "Idioma",
@@ -250,10 +267,10 @@ async function transformData(csvData){
             "Atributo visible 3": "",
             "Atributo global 3": "1",
             //Versiones
-            "Nombre del atributo 4": "Versiones",
-            "Valor(es) del atributo 1": element["Set name"], 
-            "Atributo visible 3": "", 
-            "Atributo global 3": "1",
+            "Nombre del atributo 4": "Version",
+            "Valor(es) del atributo 4": element["Set name"], 
+            "Atributo visible 4": "", 
+            "Atributo global 4": "1",
             //Color
             "Nombre del atributo 5": "", 
             "Valor(es) del atributo 5":"",
@@ -270,7 +287,7 @@ async function transformData(csvData){
              "Atributo visible 7": "1",
              "Atributo global 7": "",
              //meta color 
-             "Meta color":"",
+             "Meta: color":"",
              "Meta _color":"",
              // meta cmc
              "Meta: costo_convertido_de_mana": "",
@@ -282,19 +299,21 @@ async function transformData(csvData){
 
         });
 
-     const outputDir = 'output';
-     const filePath = path.join(outputDir, "woo-export.json" );
- 
-     if (!fs.existsSync(outputDir)) {
-         fs.mkdirSync(outputDir);
-     }
- 
-     fs.writeFile(filePath, JSON.stringify(jsonformatted, null, 2), (err) => {
-         if (err) throw err;
-         console.log(`The file has been saved!`);
-     })
-
+        
+        
     }
+    
+    //  const csv = await converter.json2csv(jsonformatted, options);
+    const outputDir = 'output';
+    const filePath = path.join(outputDir, "woo-export.json" );
+
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir);
+    }
+    fs.writeFile(filePath, JSON.stringify(jsonformatted, null, 2), (err) => {
+        if (err) throw err;
+        console.log(`The file has been saved!`);
+    })
 }
 
 
