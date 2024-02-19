@@ -2,9 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const csv = require('csvtojson');
-const converter = require('json-2-csv');
 const fileInputName = './input/carton-premium-es.csv'; 
-const options = {};
 
 
 let requestCount = 0;
@@ -40,12 +38,11 @@ function rarityTranslator(rarity){
 
 
 function colorTranslator(colors){
-
     let colorEs;
     let colorEsTotal="";
 
     let qtyColors = colors.length;
-
+    
     colors.forEach((element,i) => {
 
 
@@ -78,7 +75,6 @@ function colorTranslator(colors){
             break;
     }
 
-
     if (qtyColors !== i+1){
         colorEsTotal += `${colorEs}, `;
     } else {
@@ -104,9 +100,6 @@ async function csvToJsonConverter(csvInput){
 
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 async function getInfo(scryfallId){
     let config = {
@@ -116,7 +109,6 @@ async function getInfo(scryfallId){
         headers: { }
     };
 
-    await sleep(100); // Wait for 100ms before making the request
 
     // Update the request counter and check the time
     requestCount++;
@@ -135,6 +127,25 @@ async function getInfo(scryfallId){
     }
 }
 
+function getVariableVersion(jsonData, i, attribute) {
+    let arrayOfVersiones = new Set(); 
+    let versiones;
+
+    if (i < jsonData.length) {
+        do {
+            arrayOfVersiones.add(jsonData[i][attribute]);
+            i++;
+        } while (i < jsonData.length && jsonData[i].Name === jsonData[i - 1].Name);
+
+        versiones = Array.from(arrayOfVersiones).join(', ');
+    }
+
+    return versiones;
+}
+
+
+
+
 
 
 
@@ -148,12 +159,13 @@ async function transformData(csvData){
     
     let jsonformatted = [];
     let tipoVariable;
-    let versiones="";
     
     for (const [i, element] of jsonData.entries()){
-
+        
+        let versiones = "";
         let cardData = await getInfo(element["Scryfall ID"]);
-    
+
+        
         
         if (i === 0) {
             tipoVariable = true;
@@ -162,20 +174,9 @@ async function transformData(csvData){
         } else {
             tipoVariable = true
         }
-
+        
         
         if (tipoVariable) {
-
-        for (let j = i; j < jsonData.length && (jsonData[i].Name === jsonData[j].Name); j++) {
-            if(j + 1 < jsonData.length && jsonData[j].Name === jsonData[j+1].Name) {
-                versiones += `${jsonData[j]["Set name"]}, `;
-            } else {
-                versiones += jsonData[j]["Set name"];
-                break;
-            }
-        }
-        
-
                 jsonformatted.push({   
                 // Generales
                 Tipo: "Variable",      
@@ -184,27 +185,27 @@ async function transformData(csvData){
                 Inventario: "",
                 "Precio normal": "",
                 "Categorías": "Cartas", 
-                "Imágenes": `https://cards.scryfall.io/normal/front/9/2/${element["Scryfall ID"]}.jpg`,
+                "Imágenes": cardData.image_uris.normal,
                 "Superior": "",
                 "Posición": "0", 
                 // foil
                 "Nombre del atributo 1": "Foil", 
-                "Valor(es) del atributo 1":"foil, no foil, etched",
+                "Valor(es) del atributo 1": getVariableVersion(jsonData, i, "Foil"),
                 "Atributo visible 1": "1",
                 "Atributo global 1": "1",
                 // idioma.colors
                 "Nombre del atributo 2": "Idioma",
-                "Valor(es) del atributo 2": "Ingles, Español", 
+                "Valor(es) del atributo 2": getVariableVersion(jsonData, i, "Language"), 
                 "Atributo visible 2": "1",
                 "Atributo global 2": "1", 
                 // rareza
                 "Nombre del atributo 3": "Rareza",
-                "Valor(es) del atributo 3": "Comun, no comun, rara, mitica", 
+                "Valor(es) del atributo 3": getVariableVersion(jsonData, i, "Rarity"), 
                 "Atributo visible 3": "1",
                 "Atributo global 3": "1",
                 //Versiones
                 "Nombre del atributo 4": "Version",
-                "Valor(es) del atributo 4": versiones,
+                "Valor(es) del atributo 4": getVariableVersion(jsonData, i, "Set name"),
                 "Atributo visible 4": "1", 
                 "Atributo global 4": "1",
                 //Color
@@ -212,11 +213,10 @@ async function transformData(csvData){
                 "Valor(es) del atributo 5":colorTranslator(cardData.colors),
                 "Atributo visible 5": "1",
                 "Atributo global 5": "1",
-                "Meta: idioma": "" ,
                 //Tipo 
                 "Nombre del atributo 6": "Tipo", 
                 "Valor(es) del atributo 6":cardData.type_line,
-                "Atributo visible 6": "",
+                "Atributo visible 6": "1",
                 "Atributo global 6": "1",
                 // CMC
                 "Nombre del atributo 7": "CMC", 
@@ -237,7 +237,7 @@ async function transformData(csvData){
             });
 
             
-        }
+    }
 
 
 
@@ -249,7 +249,7 @@ async function transformData(csvData){
             Inventario: element.Quantity,
             "Precio normal": (element["Purchase price"] * 0.9).toFixed(2),
             "Categorías": "", 
-            "Imágenes":`https://cards.scryfall.io/normal/front/9/2/${element["Scrifall ID"]}.jpg`,
+            "Imágenes": cardData.image_uris.normal,
             "Superior": element.Name,
             "Posición": "", 
             // foil
@@ -301,19 +301,20 @@ async function transformData(csvData){
 
         
         
+        
+            //  const csv = await converter.json2csv(jsonformatted, options);
+            const outputDir = 'output';
+            const filePath = path.join(outputDir, "woo-export.json" );
+        
+            if (!fs.existsSync(outputDir)) {
+                fs.mkdirSync(outputDir);
+            }
+            fs.writeFile(filePath, JSON.stringify(jsonformatted, null, 2), (err) => {
+                if (err) throw err;
+                console.log(`The file has been saved!`);
+            })
     }
     
-    //  const csv = await converter.json2csv(jsonformatted, options);
-    const outputDir = 'output';
-    const filePath = path.join(outputDir, "woo-export.json" );
-
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir);
-    }
-    fs.writeFile(filePath, JSON.stringify(jsonformatted, null, 2), (err) => {
-        if (err) throw err;
-        console.log(`The file has been saved!`);
-    })
 }
 
 
