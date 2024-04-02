@@ -65,10 +65,11 @@ async function transformData(csvData){
     if (!fs.existsSync("output")) {
         fs.mkdirSync("output");
     }
-        let cardData = await getInfo("d2a8e716-ea33-4ae2-9ff8-5e78b0e50459");
+        // Enable this to remove the api request from the process; 
+        // let cardData = await getInfo("d2a8e716-ea33-4ae2-9ff8-5e78b0e50459");
     
     for (const [i, element] of jsonData.entries()){
-        // let cardData = await getInfo(element["Scryfall ID"]);
+        let cardData = await getInfo(element["Scryfall ID"]);
         let isVariable;
         isVariable = checkIfVariable(jsonData, i);
               
